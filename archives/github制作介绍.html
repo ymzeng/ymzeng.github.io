@@ -43,7 +43,7 @@
     
     <title>
         
-            tags | 
+            github制作个人博客简单步骤 | 
         
         Being excellent is a habit.
     </title>
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Being excellent is a habit.">
-    <meta name="msapplication-starturl" content="http://yoursite.com/tags/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/archives/github制作介绍.html">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Being excellent is a habit.">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/tags/">
+    <meta property="og:url" content="http://yoursite.com/archives/github制作介绍.html">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="tags | Being excellent is a habit.">
+    <meta property="og:title" content="github制作个人博客简单步骤 | Being excellent is a habit.">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Fri Dec 29 2017 14:10:15 GMT+0800">
+        <meta property="article:modified_time" content="Sat Mar 24 2018 16:44:44 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/index.html" />
+        <link rel="canonical" href="http://yoursite.com/archives/github制作介绍.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/archives/github制作介绍.html",
+    "headline": "github制作个人博客简单步骤",
+    "datePublished": "Fri Dec 29 2017 14:10:15 GMT+0800",
+    "dateModified": "Sat Mar 24 2018 16:44:44 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ymzeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Actively seeking 2018 summer intership"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Being excellent is a habit.",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -286,60 +319,260 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#软件安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">软件安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Github配置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Github配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo命令"><span class="post-toc-number">3.</span> <span class="post-toc-text">Hexo命令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#主题下载"><span class="post-toc-number">4.</span> <span class="post-toc-text">主题下载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Hexo简单书写"><span class="post-toc-number">5.</span> <span class="post-toc-text">Hexo简单书写</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
-
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
-
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
         
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                github制作个人博客简单步骤
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ymzeng</strong>
+        <span>12月 29, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=github制作个人博客简单步骤&url=http://yoursite.com/archives/github制作介绍.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=github制作个人博客简单步骤&url=http://yoursite.com/archives/github制作介绍.html&via=ymzeng" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/archives/github制作介绍.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/archives/github制作介绍.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><ul>
+<li>安装github <a href="https://github-for-windows.en.softonic.com/" target="_blank" rel="external">下载地址</a></li>
+<li>安装Node.js、npm (Node.js是一个Javascript运行环境,npm是Nodejs的包管理器)</li>
+</ul>
+<h2 id="Github配置"><a href="#Github配置" class="headerlink" title="Github配置"></a>Github配置</h2><ol>
+<li>创建github账号；</li>
+<li>创建github仓库，以github用户名命名。若github用户名是test，则新建一个test.github.io的仓库（必须是你的github用户名，其它名称无效），网站访问地址即 <a href="http://test.github.io" target="_blank" rel="external">http://test.github.io</a> ；</li>
+<li>配置SSH key，将本地仓库与github仓库连接；</li>
+<li>可选择注册新域名并绑定，新建CNAME文件，内容是新域名，在github设置中配置GitHub Pages的Custom domain；</li>
+</ol>
+<h2 id="Hexo命令"><a href="#Hexo命令" class="headerlink" title="Hexo命令"></a>Hexo命令</h2><p>Hexo是一个简单、快速、强大的基于 Github Pages 的博客发布工具，支持Markdown格式，有众多优秀插件和主题。</p>
+<ul>
+<li>安装命令 <code>$ npm install -g hexo</code>；</li>
+</ul>
+<p><strong>运行hexo需要运行<code>cd</code>切换到对应目录下：</strong></p>
+<ul>
+<li>初始化命令  <code>$ hexo init</code>；</li>
+<li>新建文章 <code>$ hexo new &quot;postName&quot;</code>；</li>
+<li>新建页面 <code>$ hexo new page &quot;pageName&quot;</code>；</li>
+<li>生成命令 <code>$ hexo g</code>；</li>
+<li>启动服务命令 <code>$ hexo s</code>，启动服务后可在本地端口预览，在浏览器输入 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a> ；</li>
+<li>部署命令 <code>$ hexo d</code>，需在系统配置文件内配置deploy的部分；</li>
+</ul>
+<p><strong>注意事项：hexo有2种_config.yml配置文件，一个是根目录下的全局_config.yml，一个是各个theme下的_config.yml。</strong></p>
+<p><strong>易错点：修改配置文件过程中谨记，在冒号之后必有空格！！！</strong></p>
+<p><strong>快捷键：Control + p，可以查找之前输入的命令。</strong></p>
+<h2 id="主题下载"><a href="#主题下载" class="headerlink" title="主题下载"></a>主题下载</h2><p><a href="https://hexo.io/themes/" target="_blank" rel="external">下载</a> 命令为 <code>$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code>，该主题所在github仓库地址+theme+主题名称。修改<strong>全局</strong>配置文件，找到theme关键词，修改主题，重新生成部署；</p>
+<p><strong>建议先执行<code>$ hexo clean</code>，清理public的内容，然后再重新生成和发布，可避免一些问题；</strong></p>
+<p><strong>易错点： 修改配置文件过程中谨记，在冒号之后必有空格！！！</strong></p>
+<h2 id="Hexo简单书写"><a href="#Hexo简单书写" class="headerlink" title="Hexo简单书写"></a>Hexo简单书写</h2><ul>
+<li><p>下载markdown编辑器，编辑在/source/_post/下面新生成的“新建.m”文件；</p>
+</li>
+<li><p>标题样式：# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题；</p>
+</li>
+<li><p>列表样式：星号* + 空格；数字 + 空格  </p>
+</li>
+<li><p>引用样式：在需要引用的文本前面添加 &gt;</p>
+</li>
+<li><p>图片样式：感叹号！ + 方括号[] + 圆括号()<br>【方括号内输入图片名称，圆括号内输入图片地址，可是本地图片路径，或者图片网址】；<br><img src="http://upload.chinaz.com/2015/1016/1444964380585.png" alt="图片"></p>
+</li>
+<li><p>链接样式：方括号[] + 圆括号()<br>【方括号内输入链接文字，圆括号内输入网站】；</p>
+</li>
+<li><p>粗体样式：用两个星号包含一段文本则该段文字变成粗体； <strong>粗体</strong></p>
+</li>
+<li><p>斜体样式：用一个星号包含一段文本则该段文字变成斜体； <em>斜体</em></p>
+</li>
+<li><p>代码框样式：用一个 ` 把中间的代码包含起来；</p>
+<p><code>$ hexo init</code></p>
+</li>
+<li><p>分割线样式： 加三个-号或*；</p>
+<hr>
+<p>更多tips待补充…</p>
+</li>
+</ul>
+
+        
+    
+
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/archives/Peresonal-Statement.html" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -545,6 +778,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

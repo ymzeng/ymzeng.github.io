@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.2 -->
+    <script>
+        window.materialVersion = "1.5.2"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            SQL语言实践&amp;数据库基础知识 | 
+        
+        Being excellent is a habit.
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Being excellent is a habit.">
+    <meta name="msapplication-starturl" content="http://yoursite.com/archives/SQL-语言实践.html">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Being excellent is a habit.">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/archives/SQL-语言实践.html">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="SQL语言实践&amp;数据库基础知识 | Being excellent is a habit.">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="Mon Apr 09 2018 19:31:32 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 11 2018 18:53:02 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/archives/SQL-语言实践.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/archives/SQL-语言实践.html",
+    "headline": "SQL语言实践&数据库基础知识",
+    "datePublished": "Mon Apr 09 2018 19:31:32 GMT+0800",
+    "dateModified": "Wed Apr 11 2018 18:53:02 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "ymzeng",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Actively seeking 2018 summer intership"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Being excellent is a habit.",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据库基础知识"><span class="post-toc-number">1.</span> <span class="post-toc-text">数据库基础知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-SQL语言包括数据定义、数据操纵-Data-Manipulation-数据控制-Data-Control"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.SQL语言包括数据定义、数据操纵(Data Manipulation),数据控制(Data Control)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-完整性约束："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.完整性约束：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-第三范式："><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4.第三范式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-ER-实体-联系-模型"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5.ER(实体/联系)模型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-索引"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">6.索引</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">7.事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-锁："><span class="post-toc-number">1.8.</span> <span class="post-toc-text">8. 锁：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#9-触发器"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">9. 触发器</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10-存储过程"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">10.存储过程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#11-视图？游标"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">11.视图？游标</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#12-连接方式"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">12.连接方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL基础语句"><span class="post-toc-number">2.</span> <span class="post-toc-text">SQL基础语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL实例"><span class="post-toc-number">3.</span> <span class="post-toc-text">SQL实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找最晚入职员工的所有信息"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">查找最晚入职员工的所有信息</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-通用适配符，选择全部字段"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">Notes: * 通用适配符，选择全部字段</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找入职员工时间排名倒数第三的员工所有信息"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">查找入职员工时间排名倒数第三的员工所有信息</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-DESC命令用于获取数据表结构"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">Notes: DESC命令用于获取数据表结构</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-LIMIT-m-n-表示从第m-1条开始，取n条数据；LIMIT-n-：-表示从第0条开始，取n条数据，是limit-0-n-的缩写。"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">Notes: LIMIT m,n : 表示从第m+1条开始，取n条数据；LIMIT n ： 表示从第0条开始，取n条数据，是limit(0,n)的缩写。</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找各个部门当前-to-date-’9999-01-01’-领导当前薪水详情以及其对应部门编号。"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">查找各个部门当前(to_date=’9999-01-01’)领导当前薪水详情以及其对应部门编号。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要AS。若联结多个表时需要AS关键字"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">Notes: TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要AS。若联结多个表时需要AS关键字</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-只有一个主键联结，直接使用自然联结-NATURAL-JOIN，不需要ON语句。"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">Notes: 只有一个主键联结，直接使用自然联结 NATURAL JOIN，不需要ON语句。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，LEFT-RIGHT-OUTER-JOIN"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">Notes: 外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，LEFT/RIGHT OUTER JOIN</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找所有员工入职时候的薪水情况，给出emp-no以及salary，-并按照emp-no进行逆序"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-排序时，增加关键字-DESC，按照逆序排序。"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">Notes: 排序时，增加关键字 DESC，按照逆序排序。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-选择时，增加关键字-DISTINCT，返回唯一值。"><span class="post-toc-number">3.4.2.</span> <span class="post-toc-text">Notes: 选择时，增加关键字 DISTINCT，返回唯一值。</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#查找薪水涨幅超过15次的员工号emp-no以及其对应的涨幅次数t"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">查找薪水涨幅超过15次的员工号emp_no以及其对应的涨幅次数t</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-WHERE语句在GROUP-BY语句之前；HAVING语句在GROUP-BY语句之后；"><span class="post-toc-number">3.5.1.</span> <span class="post-toc-text">Notes: WHERE语句在GROUP BY语句之前；HAVING语句在GROUP BY语句之后；</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#获取所有非manager的员工emp-no"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">获取所有非manager的员工emp_no</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Notes-先等值联结，再判断非manager的员工"><span class="post-toc-number">3.6.1.</span> <span class="post-toc-text">Notes: 先等值联结，再判断非manager的员工</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                SQL语言实践&数据库基础知识
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>ymzeng</strong>
+        <span>4月 09, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=SQL语言实践&amp;数据库基础知识&url=http://yoursite.com/archives/SQL-语言实践.html&pic=http://yoursite.com/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=SQL语言实践&amp;数据库基础知识&url=http://yoursite.com/archives/SQL-语言实践.html&via=ymzeng" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/archives/SQL-语言实践.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com/archives/SQL-语言实践.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h3 id="数据库基础知识"><a href="#数据库基础知识" class="headerlink" title="数据库基础知识"></a>数据库基础知识</h3><h4 id="1-数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式"><a href="#1-数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式" class="headerlink" title="1.数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式"></a>1.数据抽象：物理抽象、概念抽象、视图级抽象、内模式、模式概念、外模式</h4><p>视图抽象：把现实世界中的信息按照不同用户的观点抽象为多个逻辑数据结构。 每个逻辑数据结构称为一个视图，描述了某些图特定用户所关心的数据。 所有视图的集合形成了数据库的外模式。</p>
+<p>概念抽象: 把数据库的外模式抽象为数据库的概念模式。 数据库的概念模式综合了外模式中所有视图，反映了所有数据库用户所关心的现实世界的抽象，形成了数据库的整体逻辑结构。 </p>
+<p>物理抽象: 把数据库的概念模式进一步抽象成为数据库的内模式。 数据库的内模式抽象地描述了概念数据库如何在物理存储设备上存储。 </p>
+<p>物理数据独立性: 由内模式与概念模式之间的映射实现。 物理数据独立性是指当数据库的内模式发生改变时，数据的逻辑结构不变，从而用户编写的应用程序可以不变。</p>
+<p>逻辑数据独立性: 由概念模式与外模式之间的映射实现。逻辑数据独立性是指当概念数据库模式发生改变时，数据库的外模式不变，从而建立在外模式上的应用程序不需要修改。</p>
+<p><img src="C:\Users\Yumin\Desktop\blog\picture\数据抽象示意图" alt=""></p>
+<h4 id="2-SQL语言包括数据定义、数据操纵-Data-Manipulation-数据控制-Data-Control"><a href="#2-SQL语言包括数据定义、数据操纵-Data-Manipulation-数据控制-Data-Control" class="headerlink" title="2.SQL语言包括数据定义、数据操纵(Data Manipulation),数据控制(Data Control)"></a>2.SQL语言包括数据定义、数据操纵(Data Manipulation),数据控制(Data Control)</h4><p>数据定义：Create Table, Alter Table, Drop Table, Create/DropIndex等</p>
+<p>数据操纵：Select ,insert, update, delete,</p>
+<p>数据控制：grant, revoke, commit, rollback</p>
+<p>Oracle语句分三类：DDL、DML、DCL。 </p>
+<p>DDL（Data Definition Language）数据定义语言，包括： Create语句：可以创建数据库和数据库的一些对象。 Drop语句：可以删除数据表、索引、触发程序、条件约束以及数据表的权限等。 Alter语句：修改数据表定义及属性。 Truncate语句：删除表中的所有记录,包括所有空间分配的记录被删除。 </p>
+<p>DML（Data Manipulation Language）数据操控语言，包括： Insert语句：向数据表张插入一条记录。 Delete语句：删除数据表中的一条或多条记录，也可以删除数据表中的所有记录，但是它的操作对象仍是记录。 Update语句：用于修改已存在表中的记录的内容。 </p>
+<p>DCL（Data Control Language）数据库控制语言，包括： Grant语句：允许对象的创建者给某用户或某组或所有用户（PUBLIC）某些特定的权限。 Revoke语句：可以废除某用户或某组或所有用户访问权限</p>
+<h4 id="3-完整性约束："><a href="#3-完整性约束：" class="headerlink" title="3.完整性约束："></a>3.完整性约束：</h4><p>实体完整性约束、参照完整性约束、用户自定义完整性约束。五个约束条件：非空、唯一、主码、外码、检查。</p>
+<h4 id="4-第三范式："><a href="#4-第三范式：" class="headerlink" title="4.第三范式："></a>4.第三范式：</h4><p>第一范式(1NF):在关系模式R中的每一个具体关系r中，如果每个属性值 都是不可再分的最小数据单位，则称R是第一范式的关系。</p>
+<p>第二范式(2NF):如果关系模式R(U，F)中的所有非主属性都完全依赖于任意一个候选关键字，则称关系R是属于第二范式的。</p>
+<p>第三范式(3NF):如果关系模式R(U，F)中的所有非主属性对任何候选关键字都不存在传递信赖，则称关系R是属于第三范式的。</p>
+<h4 id="5-ER-实体-联系-模型"><a href="#5-ER-实体-联系-模型" class="headerlink" title="5.ER(实体/联系)模型"></a>5.ER(实体/联系)模型</h4><p>指提供了表示实体型、属性和联系的方法，用来描述现实世界的概念模型。E-R方法:是”实体-联系方法”(Entity-Relationship Approach)的简称。它是描述现实世界概念结构模型的有效方法。</p>
+<p>实体型(Entity):具有相同属性的实体具有相同的特征和性质，用实体名及其属性名集合来抽象和刻画同类实体;在E-R图中用矩形表示，矩形框内写明实体名;如果是弱实体的话，在矩形外面再套实线矩形。</p>
+<p>属性(Attribute):实体所具有的某一特性，一个实体可由若干个属性来刻画。在E-R图中用椭圆形表示，并用无向边将其与相应的实体连接起来;如果是多值属性的话，再椭圆形外面再套实线椭圆。如果是派生属性则用虚线椭圆表示。</p>
+<p>联系(Relationship): 数据对象彼此之间相互连接的方式称为联系，也称为关系。联系可分为以下 3 种类型:(1) 一对一联系 (2) 一对多联系 (3) 多对多联系</p>
+<h4 id="6-索引"><a href="#6-索引" class="headerlink" title="6.索引"></a>6.索引</h4><p>索引就一种特殊的查询表，数据库的搜索可以利用它加速对数据的检索。索引分为聚簇索引和非聚簇索引两种，聚簇索引是按照数据存放的物理位置为顺序的，而非聚簇索引就不一样了，聚集索引就类似新华字典中的拼音排序索引，都是按顺序进行，例如找到字典中的“爱”，就里面顺序执行找到“癌”。而非聚集索引则类似于笔画排序，索引顺序和物理顺序并不是按顺序存放的。聚集索引和非聚集索引的根本区别是表记录的排列顺序和与索引的排列顺序是否一致。聚簇索引能提高多行检索的速度，而非聚簇索引对于单行的检索很快。</p>
+<p>索引可以是唯一的，创建索引允许指定单个列或者是多个列。唯一、不为空、经常被查询的字段适合建索引。为表设置索引要付出代价的：一是增加了数据库的存储空间，二是在插入和修改数据时要花费较多的时间(因为索引也要随之变动)。</p>
+<p>根据数据库的功能，可以在数据库设计器中创建索引：唯一索引、主键索引和聚集索引。 尽管唯一索引有助于定位信息，但为获得最佳性能结果，建议改用主键或唯一约束。  </p>
+<p>唯一索引：UNIQUE  例如：create unique index stusno on student（sno）；<br>表明此索引的每一个索引值只对应唯一的数据记录，对于单列惟一性索引，这保证单列不包含重复的值。对于多列惟一性索引，保证多个值的组合不重复。</p>
+<p>主键索引：   primary key 数据库表经常有一列或列组合，其值唯一标识表中的每一行。该列称为表的主键。<br>在数据库关系图中为表定义主键将自动创建主键索引，主键索引是唯一索引的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问。 </p>
+<p>聚集索引（也叫聚簇索引）：cluster<br>在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。</p>
+<p><img src="C:\Users\Yumin\Desktop\blog\picture\聚集非聚集索引" alt=""></p>
+<h4 id="7-事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID"><a href="#7-事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID" class="headerlink" title="7.事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID"></a>7.事务：是一系列的数据库操作，是数据库应用的基本逻辑单位。性质：ACID</h4><ul>
+<li>原子性。即不可分割性，事务要么全部被执行，要么就全部不被执行。</li>
+<li>一致性或可串性。事务的执行使得数据库从一种正确状态转换成另一种正确状态</li>
+<li>隔离性。在事务正确提交之前，不允许把该事务对数据的任何改变提供给任何其他事务，</li>
+<li>持久性。事务正确提交后，其结果将永久保存在数据库中，即使在事务提交后有了其他故障，事务的处理结果也会得到保存。</li>
+</ul>
+<h4 id="8-锁："><a href="#8-锁：" class="headerlink" title="8. 锁："></a>8. 锁：</h4><p>加锁是实现数据库并发控制的一个非常重要的技术。当事务在对某个数据对象进行操作前，先向系统发出请求，对其加锁。加锁后事务就对该数据对象有了一定的控制，在该事务释放锁之前，其他的事务不能对此数据对象进行更新操作。在数据库中有两种基本的锁类型: 共享锁、互斥锁。当数据对象被加上互斥锁时，其他的事务不能对它读取和修改。加了共享锁的数据对象可以被其他事务读取，但不能修改。两段锁协议：阶段１：加锁阶段 阶段２：解锁阶段</p>
+<p>死锁及处理：事务循环等待数据锁，则会死锁。<br>死锁处理：预防死锁协议，死锁恢复机制</p>
+<h4 id="9-触发器"><a href="#9-触发器" class="headerlink" title="9. 触发器"></a>9. 触发器</h4><p>触发器是一种特殊的存储过程，主要是通过事件来触发而被执行的。它可以强化约束，来维护数据的完整性和一致性，可以跟踪数据库内的操作从而不允许未经许可的更新和变化。触发时间：有before,after。触发事件：有insert,update,delete三种。触发类型：有行触发、语句触发。</p>
+<h4 id="10-存储过程"><a href="#10-存储过程" class="headerlink" title="10.存储过程"></a>10.存储过程</h4><p>存储过程是一个预编译的SQL语句，优点是允许模块化的设计，就是说只需创建一次，以后在该程序中就可以调用多次。如果某次操作需要执行多次SQL，使用存储过程比单纯SQL语句执行要快。 调用： 1）可以用一个命令对象来调用存储过程。 2）可以供外部程序调用，比如：java程序。缺点：移植性差</p>
+<ol>
+<li>存储过程因为SQL语句已经预编绎过了，因此运行的速度比较快。</li>
+<li>可保证数据的安全性和完整性。通过存储过程可以使没有权限的用户在控制之下间接地存取数据库，从而保证数据的安全。通过存储过程可以使相关的动作在一起发生，从而可以维护数据库的完整性。</li>
+<li>可以降低网络的通信量。存储过程主要是在服务器上运行，减少对客户机的压力。</li>
+<li>存储过程可以接受参数、输出参数、返回单个或多个结果集以及返回值。可以向程序返回错误原因</li>
+<li>存储过程可以包含程序流、逻辑以及对数据库的查询。同时可以实体封装和隐藏了数据逻辑。</li>
+</ol>
+<h4 id="11-视图？游标"><a href="#11-视图？游标" class="headerlink" title="11.视图？游标"></a>11.视图？游标</h4><p>视图：是一种虚拟的表，具有和物理表相同的功能。可以对视图进行增，改，查，操作，试图通常是有一个表或者多个表的行或列的子集。对视图的修改不影响基本表。它使得我们获取数据更容易，相比多表查询。</p>
+<p>游标：是对查询出来的结果集作为一个单元来有效的处理。游标可以定在该单元中的特定行，从结果集的当前行检索一行或多行。可以对结果集当前行做修改。一般不使用游标，但是需要逐条处理数据的时候，游标显得十分重要。</p>
+<p>优点： 1）对数据库的访问，因为视图可以有选择性的选取数据库里的一部分。 2 ）用户通过简单的查询可以从复杂查询中得到结果。 3 ）维护数据的独立性，试图可从多个表检索数据。 4 ）对于相同的数据可产生不同的视图。 </p>
+<p>缺点：查询视图时，必须把视图的查询转化成对基本表的查询，如果这个视图是由一个复杂的多表查询所定义，那么，那么就无法更改数据</p>
+<h4 id="12-连接方式"><a href="#12-连接方式" class="headerlink" title="12.连接方式"></a>12.连接方式</h4><p>内连接、自连接、外连接（左、右、全）、交叉连接 内连接：只有两个元素表相匹配的才能在结果集中显示。 外连接： 左外连接:左边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 右外连接:右边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 全外连接：连接的表中不匹配的数据全部会显示出来。 交叉连接： 笛卡尔效应，显示的结果是链接表数的乘积。它不使用任何匹配或者选取条件，而是直接将一个数据源中的每个行与另一个数据源的每个行一一匹配</p>
+<h3 id="SQL基础语句"><a href="#SQL基础语句" class="headerlink" title="SQL基础语句"></a>SQL基础语句</h3><p>–<br><code>SELECT FROM Table_name WHERE condition;</code></p>
+<p><code>CREATE TABLE Student(ID NUMBER PRIMARY KEY, NAME VARCHAR2(50) NOT NULL);//建表</code></p>
+<p><code>CREATE VIEW view_name AS Select * FROM Table_name;//建视图</code></p>
+<p><code>Create UNIQUE INDEX index_name ON TableName(col_name);//建索引</code></p>
+<p><code>INSERT INTO tablename {column1,column2,…}values(exp1,exp2,…);//插入</code></p>
+<p><code>INSERT INTO Viewname {column1,column2,…} values(exp1,exp2,…);//插入视图实际影响表</code></p>
+<p><code>UPDATE tablename SET name=&#39;zang 3&#39; condition;//更新数据</code></p>
+<p><code>DELETE FROM Tablename WHERE condition;//删除</code></p>
+<p><code>GRANT (Select,delete,…) ON (对象) TO USER_NAME [WITHGRANT OPTION];//授权</code></p>
+<p><code>REVOKE (权限表) ON(对象) FROM USER_NAME[WITH REVOKE OPTION] //撤权</code></p>
+<h3 id="SQL实例"><a href="#SQL实例" class="headerlink" title="SQL实例"></a>SQL实例</h3><hr>
+<h4 id="查找最晚入职员工的所有信息"><a href="#查找最晚入职员工的所有信息" class="headerlink" title="查找最晚入职员工的所有信息"></a>查找最晚入职员工的所有信息</h4><p>–</p>
+<p> <code>SELECT * from &#39;employees&#39;</code> </p>
+<p> <code>where hire_date = (select max(hire_date) from &#39;employees&#39;)</code> </p>
+<h5 id="Notes-通用适配符，选择全部字段"><a href="#Notes-通用适配符，选择全部字段" class="headerlink" title="Notes: * 通用适配符，选择全部字段"></a>Notes: * 通用适配符，选择全部字段</h5><hr>
+<h4 id="查找入职员工时间排名倒数第三的员工所有信息"><a href="#查找入职员工时间排名倒数第三的员工所有信息" class="headerlink" title="查找入职员工时间排名倒数第三的员工所有信息"></a>查找入职员工时间排名倒数第三的员工所有信息</h4><p>–</p>
+<p> <code>SELECT * FROM &#39;employees&#39;</code></p>
+<p> <code>ORDER BY hire_date</code></p>
+<p> <code>DESC LIMIT 2,1</code></p>
+<h5 id="Notes-DESC命令用于获取数据表结构"><a href="#Notes-DESC命令用于获取数据表结构" class="headerlink" title="Notes: DESC命令用于获取数据表结构"></a>Notes: <code>DESC</code>命令用于获取数据表结构</h5><h5 id="Notes-LIMIT-m-n-表示从第m-1条开始，取n条数据；LIMIT-n-：-表示从第0条开始，取n条数据，是limit-0-n-的缩写。"><a href="#Notes-LIMIT-m-n-表示从第m-1条开始，取n条数据；LIMIT-n-：-表示从第0条开始，取n条数据，是limit-0-n-的缩写。" class="headerlink" title="Notes: LIMIT m,n : 表示从第m+1条开始，取n条数据；LIMIT n ： 表示从第0条开始，取n条数据，是limit(0,n)的缩写。"></a>Notes: <code>LIMIT m,n</code> : 表示从第m+1条开始，取n条数据；LIMIT n ： 表示从第0条开始，取n条数据，是limit(0,n)的缩写。</h5><hr>
+<h4 id="查找各个部门当前-to-date-’9999-01-01’-领导当前薪水详情以及其对应部门编号。"><a href="#查找各个部门当前-to-date-’9999-01-01’-领导当前薪水详情以及其对应部门编号。" class="headerlink" title="查找各个部门当前(to_date=’9999-01-01’)领导当前薪水详情以及其对应部门编号。"></a>查找各个部门当前(to_date=’9999-01-01’)领导当前薪水详情以及其对应部门编号。</h4><p>–</p>
+<p> <code>SELECT salaries.*, dept_manager.dept_no</code></p>
+<p> <code>FROM salaries, dept_manager</code></p>
+<p> <code>WHERE dept_manager.emp_no = salaries.emp_no AND dept_manager.to_date= &#39;9999-01-01&#39; AND salaries.to_date = &#39;9999-01-01&#39;</code></p>
+<p>–</p>
+<p> <code>SELECT s.*, d.dept_no</code> </p>
+<p> <code>FROM salaries s INNER JOIN dept_manager d</code> </p>
+<p> <code>ON s.emp_no = d.emp_no</code> </p>
+<p> <code>AND s.to_date= &#39;9999-01-01&#39; AND d.to_date= &#39;9999-01-01&#39;</code> </p>
+<h5 id="Notes-TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要AS。若联结多个表时需要AS关键字"><a href="#Notes-TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要AS。若联结多个表时需要AS关键字" class="headerlink" title="Notes: TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要AS。若联结多个表时需要AS关键字"></a>Notes: TABLE联结，必须通过主键等值联结。先SELECT的字段，该字段所在表格也需要对应先选择。表格别名：全名【空格】别名，不需要<code>AS</code>。若联结多个表时需要<code>AS</code>关键字</h5><h5 id="Notes-只有一个主键联结，直接使用自然联结-NATURAL-JOIN，不需要ON语句。"><a href="#Notes-只有一个主键联结，直接使用自然联结-NATURAL-JOIN，不需要ON语句。" class="headerlink" title="Notes: 只有一个主键联结，直接使用自然联结 NATURAL JOIN，不需要ON语句。"></a>Notes: 只有一个主键联结，直接使用自然联结 <code>NATURAL JOIN</code>，不需要ON语句。</h5><h5 id="Notes-外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，LEFT-RIGHT-OUTER-JOIN"><a href="#Notes-外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，LEFT-RIGHT-OUTER-JOIN" class="headerlink" title="Notes: 外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，LEFT/RIGHT OUTER JOIN"></a>Notes: 外部联结，可以返回一个表格的全部记录，无论是否在第二个表里面存在，<code>LEFT/RIGHT OUTER JOIN</code></h5><hr>
+<h4 id="查找所有员工入职时候的薪水情况，给出emp-no以及salary，-并按照emp-no进行逆序"><a href="#查找所有员工入职时候的薪水情况，给出emp-no以及salary，-并按照emp-no进行逆序" class="headerlink" title="查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序"></a>查找所有员工入职时候的薪水情况，给出emp_no以及salary， 并按照emp_no进行逆序</h4><p>–</p>
+<p> <code>SELECT employees.emp_no, salaries.salary</code></p>
+<p> <code>FROM employees INNER JOIN salaries ON employees.emp_no = salaries.emp_no</code></p>
+<p> <code>AND employees.hire_date = salaries.from_date</code></p>
+<p> <code>ORDER BY employees.emp_no DESC</code></p>
+<h5 id="Notes-排序时，增加关键字-DESC，按照逆序排序。"><a href="#Notes-排序时，增加关键字-DESC，按照逆序排序。" class="headerlink" title="Notes: 排序时，增加关键字 DESC，按照逆序排序。"></a>Notes: 排序时，增加关键字 <code>DESC</code>，按照逆序排序。</h5><h5 id="Notes-选择时，增加关键字-DISTINCT，返回唯一值。"><a href="#Notes-选择时，增加关键字-DISTINCT，返回唯一值。" class="headerlink" title="Notes: 选择时，增加关键字 DISTINCT，返回唯一值。"></a>Notes: 选择时，增加关键字 <code>DISTINCT</code>，返回唯一值。</h5><hr>
+<h4 id="查找薪水涨幅超过15次的员工号emp-no以及其对应的涨幅次数t"><a href="#查找薪水涨幅超过15次的员工号emp-no以及其对应的涨幅次数t" class="headerlink" title="查找薪水涨幅超过15次的员工号emp_no以及其对应的涨幅次数t"></a>查找薪水涨幅超过15次的员工号emp_no以及其对应的涨幅次数t</h4><p>–<br> <code>SELECT emp_no, count(emp_no) AS t</code></p>
+<p> <code>FROM salaries</code></p>
+<p> <code>GROUP BY emp_no HAVING t &gt; 15</code></p>
+<h5 id="Notes-WHERE语句在GROUP-BY语句之前；HAVING语句在GROUP-BY语句之后；"><a href="#Notes-WHERE语句在GROUP-BY语句之前；HAVING语句在GROUP-BY语句之后；" class="headerlink" title="Notes: WHERE语句在GROUP BY语句之前；HAVING语句在GROUP BY语句之后；"></a>Notes: <code>WHERE</code>语句在<code>GROUP BY</code>语句之前；<code>HAVING</code>语句在<code>GROUP BY</code>语句之后；</h5><h4 id="获取所有非manager的员工emp-no"><a href="#获取所有非manager的员工emp-no" class="headerlink" title="获取所有非manager的员工emp_no"></a>获取所有非manager的员工emp_no</h4><p>–<br><code>SELECT e.emp_no</code></p>
+<p><code>FROM  employees AS e LEFT OUTER JOIN  dept_manager AS d</code></p>
+<p><code>ON d.emp_no = e.emp_no</code></p>
+<p><code>WHERE d.emp_no is NULL</code></p>
+<h5 id="Notes-先等值联结，再判断非manager的员工"><a href="#Notes-先等值联结，再判断非manager的员工" class="headerlink" title="Notes: 先等值联结，再判断非manager的员工"></a>Notes: 先等值联结，再判断非manager的员工</h5><hr>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/archives/Personal-Statement.html" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="ymzeng's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ymzeng@outlook.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto: ymzeng@outlook.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/12/">十二月 2017<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/Resume" title="Resume">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                Resume
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/About" title="About">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                About
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="Timeline">
+                
+                    <i class="material-icons sidebar-material-icons">send</i>
+                
+                Timeline
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="Tags">
+                
+                    <i class="material-icons sidebar-material-icons">code</i>
+                
+                Tags
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+    <a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+        sidebar.help
+        <span class="mdl-button__ripple-container">
+          <span class="mdl-ripple"></span>
+        </span>
+      </div>
+    </a>
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Being excellent is a habit.
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+               
+               
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?V/53wGualMuiPM3xoetD5Q==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2015;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.2 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
